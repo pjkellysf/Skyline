@@ -36,9 +36,9 @@ public class Building
        g.fillRect (xval, yval, bwidth, bheight);
        
        //Draw Windows
+       g.setColor (windowColor);
        for (int j = 0; j < cols; j++) {
            for (int i = 0; i < rows; i++) {
-                g.setColor (windowColor);
                 g.fillRect ((xval + (i*spacer)) + spacer, yval + (j*spacer) + spacer, bwidth/spacer, bheight/spacer);
            }
        }
