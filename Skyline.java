@@ -5,15 +5,25 @@
 //********************************************************************
 
 import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
 
 class Skyline
 {
  	 public static void main(String[] args)
  	 {
-         JFrame frame = new JFrame ("Skyline");
-         frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-         frame.getContentPane().add(new SkylinePanel());
-         frame.pack();
-         frame.setVisible(true);
- 	 }
+		 SwingUtilities.invokeLater(new Runnable()
+		 {
+			 public void run()
+			 {
+         		JFrame frame = new JFrame ("Skyline");
+         		frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+         		frame.getContentPane().add(new SkylinePanel());
+         		frame.pack();
+         		frame.setVisible(true);
+	 		}
+ 	    });
+	}
 }
+
+
+
